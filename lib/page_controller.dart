@@ -2,7 +2,7 @@ import 'package:alosha/error_connection.dart';
 import 'package:alosha/web_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
+import 'package:flutter/cupertino.dart';
 import 'internet_data_provider.dart';
 class InternetPageController extends StatefulWidget {
   const InternetPageController({Key? key}) : super(key: key);

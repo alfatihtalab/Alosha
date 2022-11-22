@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
+import 'package:flutter/cupertino.dart';
 // ignore: prefer_collection_literals
 final Set<JavascriptChannel> jsChannels = [
   JavascriptChannel(
@@ -54,6 +54,7 @@ class _WebViewPageState extends State<WebViewPage> {
     super.initState();
     // Enable virtual display.
     if (Platform.isAndroid) WebView.platform = AndroidWebView();
+    if(Platform.isIOS) WebView.platform = CupertinoWebView();
   }
 
   @override
