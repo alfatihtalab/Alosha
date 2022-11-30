@@ -1,4 +1,5 @@
 import 'package:alosha/error_connection.dart';
+import 'package:alosha/splash_screen.dart';
 import 'package:alosha/web_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -26,9 +27,7 @@ class _InternetPageControllerState extends State<InternetPageController> {
               return ErrorConnectionPage();
             }
           }
-
-
-            return Scaffold(body: SafeArea(child: Center(child: CircularProgressIndicator(),),),);
+            return Scaffold(body: SafeArea(child: Center(child:SplashScreen(),),),);
 
           }
         );
@@ -47,6 +46,7 @@ class _InternetPageControllerState extends State<InternetPageController> {
     else{
       isLoaded = true;
     }
+    await Future.delayed(Duration(seconds: 3));
     return isLoaded;
 
   }
