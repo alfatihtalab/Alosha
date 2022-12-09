@@ -11,13 +11,18 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: Colors.black12,
       body: SafeArea(
           child: Hero(
-            tag: 'splashScreen',
-            child: Center(
-              child: AspectRatio(
-                  aspectRatio: size.height * 0.30 / size.width * 0.30,
-                  child: CircleImage(imageProvider: AssetImage('assets/logo.png',),imageRadius: 70,)),
-            ),
-          )),
+        tag: 'splashScreen',
+        child: Center(
+          child: AspectRatio(
+              aspectRatio: size.height * 0.30 / size.width * 0.30,
+              child: CircleImage(
+                imageProvider: AssetImage(
+                  'assets/logo.png',
+                ),
+                imageRadius: 70,
+              )),
+        ),
+      )),
     );
   }
 }
